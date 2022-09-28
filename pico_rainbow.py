@@ -2,17 +2,11 @@ import utime
 import st7789
 from pimoroni import RGBLED
 
-import time
-import random
-import st7789
-
 # Set the display resolution, in most cases you can flip these for portrait mode
 # WIDTH, HEIGHT = 240, 135    # Pico Display
 WIDTH, HEIGHT = 240, 240  # Pico Display 2.0
 
-display = st7789.ST7789(WIDTH, HEIGHT, rotate180=False)
-
-display.set_backlight(0.1)
+display = st7789.ST7789(width=WIDTH, height=HEIGHT, spi=3, reset=False, dc=5, backlight=4)
 
 
 class Ball:
